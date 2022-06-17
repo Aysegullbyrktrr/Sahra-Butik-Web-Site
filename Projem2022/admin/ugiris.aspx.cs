@@ -21,6 +21,8 @@ namespace Projem2022.admin
             TextBox3.Text = "";
             TextBox4.Text = "";
             TextBox5.Text = "";
+            TextBox6.Text = "";
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,22 +40,22 @@ namespace Projem2022.admin
                 uye.Tel = TextBox3.Text;
                 uye.Email = TextBox4.Text;
                 uye.Sfr = Convert.ToInt16(TextBox5.Text);
-
+                uye.Adres = TextBox6.Text;
 
                 bool cevap1 = uyem.ekle(uye);
 
                 if (cevap == true)
                 {     
                     mailhata.Visible = false;
-                    kayitbasarili.Visible = true;
-                    //Label1.Text = "Kayıt edildi";
+                    basarili.Visible = true;
+                    
                     temizle();
                 }
                 else
                 {
                     mailhata.Visible = false;
-                    kayithatali.Visible = true;
-                    //Label1.Text = "Kayıt edilemedi";
+                    hatali.Visible = true;
+                    
                     temizle();
                 }
 

@@ -30,13 +30,7 @@
 						</div>
 	<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Ürün Listeleme Ekranı</h4>
-					</div>
-					<div class="pb-20">
-						<table class="checkbox-datatable table nowrap">	
-							  <div class="card-box mb-30">
-					<div class="pd-20">
-						<h4 class="text-blue h4">Ürün Listesi</h4>
+						<h4 class="text-blue h4">Ürünler Listesi</h4>
 					</div>
 					<div class="pb-20">
 						<table class="checkbox-datatable table nowrap">					

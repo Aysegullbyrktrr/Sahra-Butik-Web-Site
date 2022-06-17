@@ -72,6 +72,7 @@
     <Content Include="admin\404.html" />
     <Content Include="admin\500.html" />
     <Content Include="admin\503.html" />
+    <Content Include="admin\admingiris.aspx" />
     <Content Include="admin\advanced-components.html" />
     <Content Include="admin\apexcharts.html" />
     <Content Include="admin\basic-table.html" />
@@ -527,8 +528,10 @@
     <Content Include="admin\ui-typography.html" />
     <Content Include="admin\ulist.aspx" />
     <Content Include="admin\urunekle.aspx" />
+    <Content Include="admin\urungncl.aspx" />
     <Content Include="admin\urunlist.aspx" />
-    <Content Include="admin\urun_s_gncl.aspx" />
+    <Content Include="admin\urun_g_ayrinti.aspx" />
+    <Content Include="admin\urunsil.aspx" />
     <Content Include="admin\u_guncel_ayrinti.aspx" />
     <Content Include="admin\u_s_guncelle.aspx" />
     <Content Include="admin\vendors\fonts\dropways.css" />
@@ -613,7 +616,11 @@
     <Content Include="admin\vendors\images\register-page-img.png" />
     <Content Include="admin\vendors\images\remedy-amico.svg" />
     <Content Include="admin\vendors\images\safari.png" />
-    <Content Include="admin\vendors\images\sahra-logo.jpeg" />
+    <Content Include="admin\vendors\images\sahra-logo.png" />
+    <Content Include="admin\vendors\images\sahra-logo1.png" />
+    <Content Include="admin\vendors\images\sahrabutikgiris.jpeg" />
+    <Content Include="admin\vendors\images\sahrabutikmenu.jpeg" />
+    <Content Include="admin\vendors\images\sahramenu.jpeg" />
     <Content Include="admin\vendors\images\success.png" />
     <Content Include="admin\vendors\images\tick.svg" />
     <Content Include="admin\vendors\images\upgrade.svg" />
@@ -655,6 +662,13 @@
     <Compile Include="admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\admingiris.aspx.cs">
+      <DependentUpon>admingiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admingiris.aspx.designer.cs">
+      <DependentUpon>admingiris.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Db.cs" />
     <Compile Include="admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -686,6 +700,13 @@
     <Compile Include="admin\urunekle.aspx.designer.cs">
       <DependentUpon>urunekle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\urungncl.aspx.cs">
+      <DependentUpon>urungncl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\urungncl.aspx.designer.cs">
+      <DependentUpon>urungncl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\urunlist.aspx.cs">
       <DependentUpon>urunlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -693,12 +714,19 @@
     <Compile Include="admin\urunlist.aspx.designer.cs">
       <DependentUpon>urunlist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\urun_s_gncl.aspx.cs">
-      <DependentUpon>urun_s_gncl.aspx</DependentUpon>
+    <Compile Include="admin\urun_g_ayrinti.aspx.cs">
+      <DependentUpon>urun_g_ayrinti.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\urun_s_gncl.aspx.designer.cs">
-      <DependentUpon>urun_s_gncl.aspx</DependentUpon>
+    <Compile Include="admin\urun_g_ayrinti.aspx.designer.cs">
+      <DependentUpon>urun_g_ayrinti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\urunsil.aspx.cs">
+      <DependentUpon>urunsil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\urunsil.aspx.designer.cs">
+      <DependentUpon>urunsil.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Uye.cs" />
     <Compile Include="admin\UyeCRUD.cs" />

@@ -11,8 +11,17 @@ namespace Projem2022.admin
 {
 
 
-    public partial class urun_s_gncl
+    public partial class urungncl
     {
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
         /// Label4 control.

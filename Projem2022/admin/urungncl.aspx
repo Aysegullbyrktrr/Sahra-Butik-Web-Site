@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="u_s_guncelle.aspx.cs" Inherits="Projem2022.admin.u_s_guncelle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="urungncl.aspx.cs" Inherits="Projem2022.admin.urungncl" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -10,19 +10,20 @@
 						</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item" aria-current="page">Üyeler</li>
-									<li class="breadcrumb-item active"><a href="ulist.aspx">Üye Listele</a></li>
+									<li class="breadcrumb-item" aria-current="page">Ürünler</li>
+									<li class="breadcrumb-item active"><a href="ulist.aspx">Ürün Listele</a></li>
 								</ol>
 							</nav>				
 					</div>					
 				</div>
 			</div>
 	<div class="card-box mb-30">
+					
 					<div class="pd-20">
-						<h4 class="text-blue h4">Üye Güncelleme/Silme</h4>
+						<h4 class="text-blue h4">Ürün Güncelle</h4>
 					</div>
 					<div class="pb-20">
-						<table class="checkbox-datatable table nowrap">					
+				<table class="checkbox-datatable table nowrap">					
 							<thead>
 								<tr>
 									<th><div class="dt-checkbox">
@@ -31,17 +32,17 @@
 										</div>
 									</th>
 									<th>Detaylı incele</th>									
-									<th>Ad</th>									
-									<th>Soyad</th>
+									<th>Barkod</th>									
+									<th>Ürün Ad</th>
 									<%--<th>Telefon numarası</th>--%>
-									<th>Email</th>
+									<th>Fiyat</th>
 									<th>Güncelle</th>
-									<th>Sil</th>
+									
 								</tr>
 							</thead>
-							<% Projem2022.admin.UyeCRUD uye = new Projem2022.admin.UyeCRUD();
+							<% Projem2022.admin.UrunCRUD urunsg = new Projem2022.admin.UrunCRUD();
                                 System.Data.DataTable dt = new System.Data.DataTable();
-                                dt = uye.liste();
+                                dt = urunsg.liste();
                                 %>
 
 							<tbody>
@@ -52,14 +53,14 @@
 									<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gprm<%=dt.Rows[i][0] %>">Detaylı İncele</button></td>
 								
                                     <td><%=dt.Rows[i][0] %></td>                                  
-                                    <td><%=dt.Rows[i][1] %></td>
+                                    <td><%=dt.Rows[i][2] %></td>
                                     <%--<td><%=dt.Rows[i][2] %></td>   --%>                               
-                                    <td><%=dt.Rows[i][5] %></td>
-									<%Session["kimisil"] = dt.Rows[i][4]; %>
+                                    <td><%=dt.Rows[i][3] %></td>
+									<%Session["kimisil"] = dt.Rows[i][0]; %>
 
-									<td><a href="u_guncel_ayrinti.aspx?guncelle=<%=dt.Rows[i][5] %>" class="micon fa fa-refresh"></a></td>										</td>
-									<td><a href="" class="micon fa fa-trash" data-toggle="modal" 
-                                                      data-target="#deleteModal<%=dt.Rows[i][5] %>"> </a></td>
+									<td><a href="urun_g_ayrinti.aspx?guncelle=<%=dt.Rows[i][4] %>" class="micon fa fa-refresh"></a></td>										</td>
+									<%--<td><a href="" class="micon fa fa-trash" data-toggle="modal" 
+                                                      data-target="#deleteModal<%=dt.Rows[i][4] %>"> </a></td>--%>
 								</tr>								
 								<%} %>
 
@@ -76,7 +77,7 @@
 											<div class="modal-content">
 
 												<div class="modal-header">
-											<h4 class="modal-title" id="myLargeModalLabel">Üyenin detaylı bilgileri:</h4>
+											<h4 class="modal-title" id="myLargeModalLabel">Ürünün detaylı bilgileri:</h4>
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 										</div>
 
@@ -86,33 +87,57 @@
 												<table class="table table-striped">
 																							
 												
+											<tr>
 												<tr>
-												<td>Ad</td>
+												<td>Ürün Resim</td>
+												<td>:</td>
+												<td>
+													<asp:Image ID="Image1" runat="server" />
+													<img alt="resim" src="<%=dt.Rows[i][8] %>" width="100px" height="100px" /></td>
+												</tr>				
+												<td>Barkod</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][0] %></td>
 												</tr>
-
-												<tr>
-												<td>Soyad</td>
+												
+													<tr>
+												<td>Kategori</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][1] %></td>
 												</tr>
-												
+
 												<tr>
-												<td>Telefon Numarası</td>
+												<td>Ürün Ad</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][2] %></td>
 												</tr>
-													
-													<tr>
-												<td>Adres</td>
+
+												<tr>
+												<td>Fiyat</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][3] %></td>
 												</tr>
+
 												<tr>
-												<td>Email</td>
+												<td>KDV</td>
+												<td>:</td>
+												<td><%=dt.Rows[i][4] %>
+												</tr>
+												
+												<tr>
+												<td>Stok Kod</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][5] %></td>
+												</tr>
+													<tr>
+												<td>Stok Adet</td>
+												<td>:</td>
+												<td><%=dt.Rows[i][6] %></td>
+												</tr>
+														<tr>
+												<td>Stok Tür</td>
+												<td>:</td>
+												<td><%=dt.Rows[i][7] %></td>
 												</tr>
 												
 												
@@ -169,10 +194,10 @@
           <%--<h4 class="modal-title">Modal Header</h4>--%>
         </div>
         <div class="modal-body">
-          <h6><b>'<%=dt.Rows[i][0] %> <%=dt.Rows[i][1] %>'</b> adlı müşteriyi silmek istiyor musun?</h6>
+          <h6><b>'<%=dt.Rows[i][0] %> <%=dt.Rows[i][1] %>'</b> Barkod No'lu ürünü silmek istiyor musun?</h6>
         </div>
         <div class="modal-footer">
-            <a href="u_s_guncelle.aspx?sil=<%=dt.Rows[i][5] %>">
+            <a href="urunsil.aspx?sil=<%=dt.Rows[i][5] %>">
                 <button type="button" class="btn btn-success">Evet</button>
             </a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Hayır</button>
@@ -206,6 +231,5 @@
                                 <p> </p>
                             </div>
                         </div>
-            </div>
-        </div>
+						</div></div>	
 </asp:Content>

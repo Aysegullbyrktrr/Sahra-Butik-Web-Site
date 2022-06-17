@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Projem2022.admin
 {
-    public partial class Admin : System.Web.UI.MasterPage
+    public partial class urun_g_ayrinti : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["admin"] != "ok")
-            {
-                Response.Redirect("admingiris.aspx");
-            }
+           
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Projem2022.admin
 
             string urunresim = FileUpload1.FileName;
             string urunresimtarih = System.DateTime.Now.ToString("MMddyyyy_HHmmss");
-            FileUpload1.SaveAs(Server.MapPath("urunresim/" + urunresimtarih + "_" + urunresim));
+            
 
 
             Urun yurun = new Urun();
@@ -54,7 +54,8 @@ namespace Projem2022.admin
             yurun.Skod = TextBox4.Text;
             yurun.Sadet = Convert.ToInt32(TextBox6.Text);
             yurun.Stur = rad2;
-            yurun.Resim = ("urunresim/" + FileUpload1.FileName);
+            yurun.Resim = "urunresim/" + urunresimtarih + "_" + urunresim ;
+            FileUpload1.SaveAs(Server.MapPath("urunresim/" + urunresimtarih + "_" + urunresim));
             bool cevap = uruncrud.kayit(yurun);
             if (cevap == true)
             {

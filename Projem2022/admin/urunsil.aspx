@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="urun_s_gncl.aspx.cs" Inherits="Projem2022.admin.urun_s_gncl" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="urunsil.aspx.cs" Inherits="Projem2022.admin.urun_s_gncl" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -19,7 +19,7 @@
 			</div>
 	<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Ürün Güncelleme/Silme Ekranı</h4>
+						<h4 class="text-blue h4">Ürün Silme Ekranı</h4>
 					</div>
 					<div class="pb-20">
 						<table class="checkbox-datatable table nowrap">					
@@ -59,7 +59,7 @@
 
 									<td><a href="u_guncel_ayrinti.aspx?guncelle=<%=dt.Rows[i][4] %>" class="micon fa fa-refresh"></a></td>										</td>
 									<td><a href="" class="micon fa fa-trash" data-toggle="modal" 
-                                                      data-target="#deleteModal<%=dt.Rows[i][4] %>"> </a></td>
+                                                      data-target="#deleteModal<%=dt.Rows[i][5] %>"> </a></td>
 								</tr>								
 								<%} %>
 
@@ -87,6 +87,13 @@
 																							
 												
 											<tr>
+												<tr>
+												<td>Ürün Resim</td>
+												<td>:</td>
+												<td>
+													<asp:Image ID="Image1" runat="server" />
+													<img alt="resim" src="<%=dt.Rows[i][8] %>" width="100px" height="100px" /></td>
+												</tr>				
 												<td>Barkod</td>
 												<td>:</td>
 												<td><%=dt.Rows[i][0] %></td>
@@ -178,7 +185,7 @@
             </div>
         </div>
     </div>--%>
-    <div class="modal fade" id="deleteModal<%=dt.Rows[i][4] %>" role="dialog">
+    <div class="modal fade" id="deleteModal<%=dt.Rows[i][5] %>" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header" style="background-color:#58d8a3">
@@ -189,7 +196,7 @@
           <h6><b>'<%=dt.Rows[i][0] %> <%=dt.Rows[i][1] %>'</b> Barkod No'lu ürünü silmek istiyor musun?</h6>
         </div>
         <div class="modal-footer">
-            <a href="urun_s_gncl.aspx?sil=<%=dt.Rows[i][4] %>">
+            <a href="urunsil.aspx?sil=<%=dt.Rows[i][5] %>">
                 <button type="button" class="btn btn-success">Evet</button>
             </a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Hayır</button>

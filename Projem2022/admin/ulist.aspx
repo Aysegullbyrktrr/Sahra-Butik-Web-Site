@@ -30,7 +30,7 @@
 						</div>
 	<div class="card-box mb-30">
 					<div class="pd-20">
-						<h4 class="text-blue h4">Üye Görüntüleme Ekranı</h4>
+						<h4 class="text-blue h4">Üyeler Listesi</h4>
 					</div>
 					<div class="pb-20">
 						<table class="checkbox-datatable table nowrap">					
@@ -68,7 +68,7 @@
                                     <td><%=dt.Rows[i][1] %></td>                                  
                                     <td><%=dt.Rows[i][2] %></td>
                                     <%--<td><%=dt.Rows[i][3] %></td> --%>                                 
-                                    <td><%=dt.Rows[i][4] %></td>                                    
+                                    <td><%=dt.Rows[i][5] %></td>                                    
 									<%--<td><a href="u_s_guncelle.aspx?prm=<%=dt.Rows[i][0] %>" class="btn btn-warning">Güncelle</a></td>										</td>
 									<td><a href="" class="btn btn-danger">Sil</a></td>--%>
 								</tr>								
@@ -115,10 +115,15 @@
 												<td><%=dt.Rows[i][2] %></td>
 												</tr>
 													
+													<tr>
+												<td>Adres</td>
+												<td>:</td>
+												<td><%=dt.Rows[i][3] %></td>
+												</tr>
 												<tr>
 												<td>Email</td>
 												<td>:</td>
-												<td><%=dt.Rows[i][4] %></td>
+												<td><%=dt.Rows[i][5] %></td>
 												</tr>
 												
 												

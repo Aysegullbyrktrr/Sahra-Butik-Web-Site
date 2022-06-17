@@ -28,6 +28,7 @@ namespace Projem2022.admin
 
                 }
                 else if (cevap == false)
+
                 {
                     if (!IsPostBack)
                     {

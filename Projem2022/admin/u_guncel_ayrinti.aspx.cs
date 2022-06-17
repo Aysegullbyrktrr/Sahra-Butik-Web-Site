@@ -22,6 +22,7 @@ namespace Projem2022.admin
                     TextBox1.Text = uyem.Ad;
                     TextBox2.Text = uyem.Soyad;
                     TextBox3.Text = uyem.Tel;
+                    TextBox5.Text = uyem.Adres;
                     TextBox4.Text = uyem.Email;
                 }
                 else
@@ -42,6 +43,7 @@ namespace Projem2022.admin
             uyem.Soyad = TextBox2.Text;
             uyem.Tel = TextBox3.Text;
             uyem.Email = TextBox4.Text;
+            uyem.Adres = TextBox5.Text;
 
             bool cevap = islem.uyeguncelleme(uyem);
             if (cevap == true)

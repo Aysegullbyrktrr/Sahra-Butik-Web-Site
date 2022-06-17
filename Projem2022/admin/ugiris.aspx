@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="ugiris.aspx.cs" Inherits="Projem2022.admin.ugiris" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+            color: #0000FF;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="card-box pd-20 height-100-p mb-30">
@@ -19,9 +25,31 @@
 						</div>
 		</div>
     </div>
+	
+		<div id="basarili" runat="server" class="alert alert-success alert-dismissible fade show" role="alert" visible="false">
+							<strong>Başarılı işlem!</strong> Girilen bilgiler kaydedilmiştir.
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+		
+					<div id="hatali" runat="server" class="alert alert-danger alert-dismissible fade show" role="alert" visible="false">
+							<strong>Hatalı işlem!</strong> Kayıt sırasında bir hata oluştu bilgilerinizi kontrol ederek lütfen tekrar deneyiniz.
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+		
+					
+		<div id="mailhata" runat="server" class="alert alert-danger alert-dismissible fade show" role="alert" visible="false">
+							<strong>Hatalı işlem!</strong> Bu Mail Adresi zaten kullanımda.
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						</button>
+						</div>
 	<div class="pd-20 card-box mb-30">
 		<div class="pd-20">
-						<h4 class="text-blue h4">Üye Kayıt Ekranı</h4>
+						<h4 class="auto-style1">Üye Kayıt </h4>
 					</div>
 					<div class="clearfix">
 						<div class="pull-left">
@@ -33,65 +61,61 @@
 						</div>
 					</div>
 		
-		<div id="kayitbasarili" runat="server" class="alert alert-success alert-dismissible fade show" role="alert" visible="false">
-							<strong>Başarılı işlem!</strong> Girilen bilgiler kaydedilmiştir.
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							 <span aria-hidden="true">&times;</span>
-						</button>
-						</div>
-
-					<div id="kayithatali" runat="server" class="alert alert-danger alert-dismissible fade show" role="alert" visible="false">
-							<strong>Hatalı işlem!</strong> Kayıt sırasında bir hata oluştu bilgilerinizi kontrol ederek lütfen tekrar deneyiniz.
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							 <span aria-hidden="true">&times;</span>
-						</button>
-						</div>
-		<div id="mailhata" runat="server" class="alert alert-danger alert-dismissible fade show" role="alert" visible="false">
-							<strong>Hatalı işlem!</strong> Bu Mail Adresi zaten kullanımda.
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							 <span aria-hidden="true">&times;</span>
-						</button>
-						</div>
 	<form>
+		 <div class="container">
+ 
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault01"  class="col-sm-12 col-md-2 col-form-label">Ad</label>
 		<asp:TextBox ID="TextBox1" class="form-control" placeholder="Ayşe" required runat="server"></asp:TextBox>
 								</div>
 							</div>
-							
-		
+							</div>
+		<div class="container">
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault02"  class="col-sm-12 col-md-2 col-form-label">Soyad</label>
 		<asp:TextBox ID="TextBox2" class="form-control" placeholder="Bayraktar" required runat="server"></asp:TextBox>
 								</div>
 							</div>
+			</div>
+		<div class="container">
 			<div class="form-group row">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault03" class="form-label">Telefon No</label>
 		<asp:TextBox ID="TextBox3" class="form-control"  placeholder="0-(5**)-***-****" required runat="server" ></asp:TextBox>
-    </div></div>
+    </div></div></div>
+		<div class="container">
 		
 								<div class="form-group row">
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
+		 <label for="validationDefault04"  class="col-sm-12 col-md-2 col-form-label">Adres</label>
+		<asp:TextBox ID="TextBox6" class="form-control" placeholder="" required runat="server" ></asp:TextBox>
+								</div></div>
+			</div>
+		<div class="container">
+		
+								<div class="form-group row">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault04"  class="col-sm-12 col-md-2 col-form-label">Email</label>
 		<asp:TextBox ID="TextBox4" class="form-control" placeholder="@gmail.com" required runat="server" TextMode="Email"></asp:TextBox>
 								</div></div>
-								
+			</div>
+					<div class="container">			
 							<div class="form-group row">
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault05"  class="col-sm-12 col-md-2 col-form-label">Şifre</label>
 		<asp:TextBox ID="TextBox5" class="form-control" placeholder="********" required runat="server" TextMode="Password"></asp:TextBox>
 								
 							</div>
 								
-							</div>
+							</div></div>
+		<div class="container">
 		<div class="form-group row">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-12">
 			<asp:Button ID="Button1" CssClass="btn btn-outline-primary" runat="server" Text="Ekle" OnClick="Button1_Click" />
-			</div></div>
-
+			</div></div></div>
+		
 </asp:Content>

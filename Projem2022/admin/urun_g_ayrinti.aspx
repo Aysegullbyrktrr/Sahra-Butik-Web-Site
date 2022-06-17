@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="urunekle.aspx.cs" Inherits="Projem2022.admin.urunekle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="urun_g_ayrinti.aspx.cs" Inherits="Projem2022.admin.urun_g_ayrinti" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    
-		<div class="pd-ltr-20">
+    <div class="pd-ltr-20">
 	
 	
 			<div class="page-header">
@@ -16,7 +14,7 @@
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item" aria-current="page">Ürün</li>
-									<li class="breadcrumb-item active"><a href="uekle.aspx">Ürün Ekle</a></li>
+									<li class="breadcrumb-item active"><a href="urungncl.aspx">Ürün Güncelle</a></li>
 								</ol>
 							</nav>
 					</div>					
@@ -47,7 +45,7 @@
 
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Ürün ekleme ekranı</h4>
+							<h4 class="text-blue h4">Ürün Güncelleme ekranı</h4>
 							<p class="mb-30">Ürün bilgilerini lütfen doğru giriniz.</p>
 						</div>
 						
@@ -55,9 +53,9 @@
 
 					<form>
 														
-							 <div class="container">
+							
 							<div class="form-group row">
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		<%-- <label for="validationDefault01"   class="col-sm-12 col-md-2 col-form-label">Kategori</label>	--%>		
 			<div>	 <label for="validationDefault01"  class="col-sm-12 col-md-2 col-form-label">Kategori</label></div>
 			<asp:DropDownList ID="DropDownList1" runat="server" required class="custom-select col-8" >
@@ -67,31 +65,29 @@
                 <asp:ListItem Value="3">Abiye</asp:ListItem>
                 <asp:ListItem></asp:ListItem>
                                 </asp:DropDownList>									
-		<asp:Label ID="Label4" runat="server" Text="Yeni Kategori ekle"  class="btn btn-primary col-4-form-label" data-toggle="modal" data-target="#y_kat_ekle" causesvalidation="false"></asp:Label>
+		<%--<asp:Label ID="Label4" runat="server" Text="Yeni Kategori ekle" required class="btn btn-primary col-4-form-label" data-toggle="modal" data-target="#y_kat_ekle" causesvalidation="false"></asp:Label>--%>
 								
-							</div></div></div>
-
+							</div></div>
 																		
-						 <div class="container">
+
 							<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault02"  class="col-sm-12 col-md-2 col-form-label">Ürün Ad</label>
 		<asp:TextBox ID="TextBox1" class="form-control" placeholder="" required runat="server"></asp:TextBox>
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
+
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault03"  class="col-sm-12 col-md-2 col-form-label">Ürün Fiyat</label>
 		<asp:TextBox ID="TextBox2" class="form-control" placeholder="" required runat="server"></asp:TextBox>
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault07"  class="col-sm-12 col-md-2 col-form-label">Kdv</label>
 								<div class="col-md-6 col-sm-12">
 									
@@ -104,36 +100,32 @@
 								</div>
 				
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault04"  class="col-sm-12 col-md-2 col-form-label">Barkod</label>
 		<asp:TextBox ID="TextBox3" class="form-control" placeholder="" required runat="server"></asp:TextBox>
 								</div>
 							</div>
-							 </div>
-						 <div class="container">
+
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault05"  class="col-sm-12 col-md-2 col-form-label">Stok Kod</label>
 		<asp:TextBox ID="TextBox4" class="form-control" placeholder="" required runat="server"></asp:TextBox>
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault06"  class="col-sm-12 col-md-2 col-form-label">Stok Adet</label>
 		<asp:TextBox ID="TextBox6" class="form-control" placeholder="" required runat="server"></asp:TextBox>
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault07"  class="col-sm-12 col-md-2 col-form-label">Stok Durum</label>
 								<div class="col-md-6 col-sm-12">
 									
@@ -146,17 +138,16 @@
 								</div>
 				
 								</div>
-							</div></div>
-						 <div class="container">
+							</div>
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-12">
+							<div class="col-sm-12 col-md-6">
 		 <label for="validationDefault08"  class="col-sm-12 col-md-2 col-form-label">Ürün Resim</label>
 							
       	<asp:FileUpload ID="FileUpload1" runat="server" class="form-control" required />
 							</div>
 		
-							</div></div>
+							</div>
 						<%--<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Ürün resmi</label>
 							
@@ -168,14 +159,19 @@
 								<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Resim seçimi alanı boş bırakılamaz." ControlToValidate="FileUpload1" Font-Size="Small" ForeColor="#EF5A5A" ValidationGroup="kitapkayit"></asp:RequiredFieldValidator>
 							</div>														
 						</div>--%>	
-						 <div class="container">
 
 						<div class="form-group row">
 							<div class="col-sm-6 col-md-5">	
-								<asp:Button ID="Button1" runat="server" Text="Kaydet" CssClass="btn btn-primary" OnClick="Button1_Click" ValidationGroup="urunkayit" />
+								<asp:Button ID="Button1" runat="server" Text="Kaydet" CssClass="btn btn-primary"  ValidationGroup="urunkayit" />
 							</div>															
-						</div></div>
+						</div>
 
+						<div class="alert alert-success alert-dismissible fade show" role="alert"  id="msj" runat="server" visible="false">
+  <strong>Sahra Butik</strong> Ürün Güncelleme işlemi başarılı
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 				<%--	<%--kategori ekle modal başlangıç--%>	
 							
 							<%--<div class="modal fade bs-example-modal-lg" id="y_kat_ekle" tabindex="-1" role="form" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -228,4 +224,6 @@
 			</div>
 		</div>
 	</div>
+	
+	
 </asp:Content>

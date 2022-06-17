@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Admin.Master" AutoEventWireup="true" CodeBehind="u_guncel_ayrinti.aspx.cs" Inherits="Projem2022.admin.u_guncel_ayrinti" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style3 {
+            text-align: center;
+            color: #0000FF;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="card-box pd-20 height-100-p mb-30">
@@ -19,9 +25,15 @@
 						</div>
 		</div>
     </div>
+	<div class="alert alert-success alert-dismissible fade show" role="alert"  id="msj" runat="server" visible="false">
+  <strong>Sahra Butik</strong> Üye Güncelleme işlemi başarılı
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 	<div class="pd-20 card-box mb-30">
 		<div class="pd-20">
-						<h4 class="text-blue h4">Üye Güncelleme Ekranı</h4>
+						<h4 class="auto-style3">Üye Güncelleme Ekranı</h4>
 					</div>
 					<div class="clearfix">
 						<div class="pull-left">
@@ -47,48 +59,58 @@
 						</button></div>
 		--%>
 	<form>
+			<div class="container">
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault01"  class="col-sm-12 col-md-2 col-form-label">Ad</label>
 		<asp:TextBox ID="TextBox1" class="form-control" placeholder="Ayşe" required runat="server"></asp:TextBox>
 								</div>
 							</div>
-							
+							</div>
+			<div class="container">
 		
 						<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault02"  class="col-sm-12 col-md-2 col-form-label">Soyad</label>
 		<asp:TextBox ID="TextBox2" class="form-control" placeholder="Bayraktar" required runat="server"></asp:TextBox>
 								</div>
 							</div>
+				</div>
+			<div class="container">
 			<div class="form-group row">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault03" class="form-label">Telefon No</label>
 		<asp:TextBox ID="TextBox3" class="form-control"  placeholder="0-(5**)-***-****" required runat="server" ></asp:TextBox>
     </div>
 
 			</div>
+				</div>
+		<div class="container">
 		
 								<div class="form-group row">
-							<div class="col-sm-12 col-md-6">
+							<div class="col-sm-12 col-md-12">
+		 <label for="validationDefault04"  class="col-sm-12 col-md-2 col-form-label">Adres</label>
+		<asp:TextBox ID="TextBox5" class="form-control" placeholder="" required runat="server" ></asp:TextBox>
+								</div></div>
+			</div>
+			<div class="container">
+								<div class="form-group row">
+							<div class="col-sm-12 col-md-12">
 		 <label for="validationDefault04"  class="col-sm-12 col-md-2 col-form-label">Email</label>
 		<asp:TextBox ID="TextBox4" class="form-control" placeholder="@gmail.com" required runat="server" TextMode="Email"></asp:TextBox>
 								</div></div>
-								
+								</div>
+
 							
-							
+					<div class="container">			
 		<div class="form-group row">
-			<div class="col-sm-12 col-md-6">
+			<div class="col-sm-12 col-md-12">
 			<asp:Button ID="Button1" CssClass="btn btn-outline-primary" runat="server" Text="Ekle" OnClick="Button1_Click" />
 			</div></div>
 	</div>
+	</div>
+
 	
-	<div class="alert alert-success alert-dismissible fade show" role="alert"  id="msj" runat="server" visible="false">
-  <strong>Sahra Butik</strong> Üye Güncelleme işlemi başarılı
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
 </asp:Content>
