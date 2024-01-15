@@ -145,6 +145,7 @@
 		 <label for="validationDefault08"  class="col-sm-12 col-md-2 col-form-label">Ürün Resim</label>
 							
       	<asp:FileUpload ID="FileUpload1" runat="server" class="form-control" required />
+							  <asp:Image ID="Image1" runat="server" Width="75" Height="75" CssClass="form-control"/>
 							</div>
 		
 							</div>
@@ -162,7 +163,7 @@
 
 						<div class="form-group row">
 							<div class="col-sm-6 col-md-5">	
-								<asp:Button ID="Button1" runat="server" Text="Kaydet" CssClass="btn btn-primary"  ValidationGroup="urunkayit" />
+								<asp:Button ID="Button1" runat="server" Text="Kaydet" OnClick="Button1_Click" CssClass="btn btn-primary"  ValidationGroup="urunkayit" />
 							</div>															
 						</div>
 

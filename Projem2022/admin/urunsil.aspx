@@ -57,9 +57,9 @@
                                     <td><%=dt.Rows[i][3] %></td>
 									<%Session["kimisil"] = dt.Rows[i][0]; %>
 
-									<td><a href="u_guncel_ayrinti.aspx?guncelle=<%=dt.Rows[i][4] %>" class="micon fa fa-refresh"></a></td>										</td>
-									<td><a href="" class="micon fa fa-trash" data-toggle="modal" 
-                                                      data-target="#deleteModal<%=dt.Rows[i][5] %>"> </a></td>
+									<td><a href="urungncl.aspx?guncelle=<%=dt.Rows[i][0] %>" class="btn btn-warning">Güncelle</a></td>										
+									<td><a href=""  data-toggle="modal" 
+                                                      data-target="#deleteModal<%=dt.Rows[i][5] %>"  class="btn btn-danger">Sil </a></td>
 								</tr>								
 								<%} %>
 
@@ -196,7 +196,7 @@
           <h6><b>'<%=dt.Rows[i][0] %> <%=dt.Rows[i][1] %>'</b> Barkod No'lu ürünü silmek istiyor musun?</h6>
         </div>
         <div class="modal-footer">
-            <a href="urunsil.aspx?sil=<%=dt.Rows[i][5] %>">
+            <a href="urunsil.aspx?sil=<%=dt.Rows[i][0] %>">
                 <button type="button" class="btn btn-success">Evet</button>
             </a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Hayır</button>

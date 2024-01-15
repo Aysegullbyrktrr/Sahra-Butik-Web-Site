@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,8 +11,45 @@ namespace Projem2022.admin
     public partial class urunekle : System.Web.UI.Page
     {
         string rad1,rad2;
+        
+        string urunresimtarih = System.DateTime.Now.ToString("MMddyyyy_HHmmss");
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            string katresim = FileUpload2.FileName;
+            Katekle katekle = new Katekle();
+            KatekleCRUD katekleCRUD = new KatekleCRUD();
+            katekle.Katno = Convert.ToInt16(TextBox5.Text);
+            katekle.Katad = TextBox8.Text;
+            katekle.Katetiket =TextBox7.Text ;
+            katekle.Resim = "urunresim/" + urunresimtarih + "_" + katresim;
+            FileUpload1.SaveAs(Server.MapPath("urunresim/" + urunresimtarih + "_" + katresim));
+            bool cevap = katekleCRUD.kategoriekle(katekle);
+            if (cevap == true)
+            {
+                kayitbasarili.Visible = false;
+               
+                y_kat_ekle.Visible = true;
+            }
+            else
+            {
+                kayithatali.Visible = true;
+            }
+
+            UrunCRUD urunkat = new UrunCRUD();
+            DataTable katdt = urunkat.katliste();
+            DropDownList1.DataValueField = "KategoriId";
+            DropDownList1.DataTextField = "KategoriAdi";
+
+            DropDownList1.DataSource = katdt;
+            DropDownList1.DataBind();
+            DropDownList1.Items.Insert(0, new ListItem("Lütfen seçim yapın", "0"));
+
 
         }
 
@@ -40,8 +78,6 @@ namespace Projem2022.admin
 
 
             string urunresim = FileUpload1.FileName;
-            string urunresimtarih = System.DateTime.Now.ToString("MMddyyyy_HHmmss");
-            
 
 
             Urun yurun = new Urun();

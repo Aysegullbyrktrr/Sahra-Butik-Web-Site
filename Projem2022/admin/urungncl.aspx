@@ -58,12 +58,12 @@
                                     <td><%=dt.Rows[i][3] %></td>
 									<%Session["kimisil"] = dt.Rows[i][0]; %>
 
-									<td><a href="urun_g_ayrinti.aspx?guncelle=<%=dt.Rows[i][4] %>" class="micon fa fa-refresh"></a></td>										</td>
+									<td><a href="urun_g_ayrinti.aspx?guncelle=<%=dt.Rows[i][0] %>" class="btn btn-warning">Güncelle</a></td>									
 									<%--<td><a href="" class="micon fa fa-trash" data-toggle="modal" 
                                                       data-target="#deleteModal<%=dt.Rows[i][4] %>"> </a></td>--%>
 								</tr>								
 								<%} %>
-
+								 
 							</tbody>
 						</table>
 					</div>
@@ -93,7 +93,7 @@
 												<td>:</td>
 												<td>
 													<asp:Image ID="Image1" runat="server" />
-													<img alt="resim" src="<%=dt.Rows[i][8] %>" width="100px" height="100px" /></td>
+													<img alt="resim" src="<%=dt.Rows[i][8] %>" width="100px" height="100px" /></              td>
 												</tr>				
 												<td>Barkod</td>
 												<td>:</td>

@@ -37,7 +37,13 @@
 								</button>
 								</div>
 					
-					
+						
+					<div id="y_kat_ekle" runat="server" class="alert alert-success alert-dismissible fade show" role="alert" visible="false">
+									<strong>Başarılı işlem!</strong> Yeni girilen Kategori bilgileri kaydedilmiştir.
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									 <span aria-hidden="true">&times;</span>
+								</button>
+								</div>
 	
 				
 
@@ -178,29 +184,49 @@
 
 				<%--	<%--kategori ekle modal başlangıç--%>	
 							
-							<%--<div class="modal fade bs-example-modal-lg" id="y_kat_ekle" tabindex="-1" role="form" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+							<div class="modal fade bs-example-modal-lg" id="y_kat_ekle" tabindex="-1" role="form" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-lg modal-dialog-centered">
 									<div class="modal-content">
 										<div class="modal-header">
 											<h4 class="modal-title" id="y_kat_ekle">Yeni Kategori ekle</h4>
 											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 										</div>
-										<%--<div class="modal-body">																				
+										<div class="modal-body">		
+											
 											<div class="form-group row">
 						
-							<div class="col-sm-12 col-md-6">
-		 <label for="validationDefault09"  class="col-sm-12 col-md-2 col-form-label">Kategori Adı</label>
-		<asp:TextBox ID="TextBox5" class="form-control" placeholder="" required runat="server"></asp:TextBox>
-								</div>
+		 <label   class="col-sm-12 col-md-2 col-form-label">Kategori No</label>
+					<div class="col-sm-12 col-md-6">
+		<asp:TextBox ID="TextBox5" class="form-control" placeholder="" runat="server"></asp:TextBox>
+					</div>
+		<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Bu Alan Boş Geçilemez" ControlToValidate="TextBox5" ValidationGroup="katekle" ForeColor="#CC0000"></asp:RequiredFieldValidator>
 							</div>
-												<%--<div class="form-group row">
-													<label class="col-sm-12 col-md-2 col-form-label">Kategori Adı</label>
+
+						<div class="form-group row">		
+		   <label class="col-sm-12 col-md-2 col-form-label">Kategori Adı</label>
+						<div class="col-sm-12 col-md-6">
+														
+			<asp:TextBox ID="TextBox8" runat="server" class="form-control" type="text"></asp:TextBox>
+				     	</div>
+					<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Bu Alan Boş geçilemez" ControlToValidate="TextBox8" ValidationGroup="katekle" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+	                 </div>
+
+									<div class="form-group row">
+							<label class="col-sm-12 col-md-2 col-form-label">Kategori Etiket</label>
+							<div class="col-sm-12 col-md-6">
+							<asp:TextBox ID="TextBox7" runat="server" class="form-control" type="text"></asp:TextBox>
+													</div>
+				<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*Bu Alan Boş geçilemez" ControlToValidate="TextBox7" ValidationGroup="katekle" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+							</div>
+													<div class="form-group row">
+									
+							<label class="col-sm-12 col-md-2 col-form-label">Kategori Resmi</label>
+							<div class="col-sm-12 col-md-6">
+								<asp:FileUpload ID="FileUpload2" runat="server" />	
 							
-													<div class="col-sm-6 col-md-5">								
-														<asp:TextBox ID="TextBox5" runat="server" class="form-control" type="text"></asp:TextBox>
 													</div>
 							
-													<div class="col-sm-6 col-md-5 col-form-label">
+													<%--<div class="col-sm-6 col-md-5 col-form-label">
 														<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Yazar adı alanı boş bırakılamaz." ControlToValidate="TextBox5" Font-Size="Small" ForeColor="#EF5A5A" ValidationGroup="yazarkayit"></asp:RequiredFieldValidator>
 													</div>														
 												</div>--%>
@@ -209,11 +235,11 @@
 
 
 										</div>
-										<%--<div class="modal-footer">
+										<div class="modal-footer">
 											<asp:Button ID="Button4" runat="server" Text="İptal" class="btn btn-secondary" data-dismiss="modal"/>
-											<asp:Button ID="Button5" runat="server" Text="Kaydet" CssClass="btn btn-primary" ValidationGroup="katkayit"/>
+											<asp:Button ID="Button5" runat="server" Text="Kaydet" OnClick="Button5_Click" CssClass="btn btn-primary" ValidationGroup="katekle" formnovalidate="formnovalidate"/>
 											
-										</div>--%>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -44,7 +44,7 @@ namespace Projem2022.admin
 
                 bool cevap1 = uyem.ekle(uye);
 
-                if (cevap == true)
+                if (cevap1 == true)
                 {     
                     mailhata.Visible = false;
                     basarili.Visible = true;

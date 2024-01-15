@@ -1,0 +1,382 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="Projem2022.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sahra Butik</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+    <style>
+      .modal-content {
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-body {
+  padding: 0;
+}
+.btn-close {
+  position: absolute;
+  right: 0;
+  padding: 1em;
+}
+h1 {
+  font-size: 2.3em;
+  font-weight: bold;
+}
+.myform {
+  padding: 2em;
+  max-width: 100%;
+  color: #fff;
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+  @media (max-width: 576px) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.form-control:focus {
+  box-shadow: inset 0 -1px 0 #7e7e7e;
+}
+.form-control {
+  background-color: inherit;
+  color: #fff;
+  padding-left: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
+}
+.myform .btn {
+  width: 100%;
+  font-weight: 800;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 0.5em 0;
+}
+.myform .btn:hover {
+  background-color: inherit;
+  color: #fff;
+  border-color: #fff;
+}
+p {
+  text-align: center;
+  padding-top: 2em;
+  color: grey;
+}
+p a {
+  color: #e1e1e1;
+  text-decoration: none;
+}
+p a:hover {
+  color: #fff;
+}
+  </style>
+  
+
+       <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+    <script id="basarisizgiris">
+        function basarisizgiris() {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'error',
+                title: 'Giriş yapılamadı şifreniz ya da mail adresiniz hatalı! Hesabınız doğrulanmamış ise doğrulayın!'
+            })
+        }
+    </script>
+
+	<script id="kayitbasarili">
+        function kayitbasarili() {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'info',
+                title: 'Kayıt işleminizi tamamlamak için mailinize gelen kodu girin!'
+            })
+        }
+    </script>
+
+	<script id="kayitbasarisiz">
+        function kayitbasarisiz() {
+
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'error',
+                title: 'Kayıt sırasında bir hata oluştu lütfen daha sonra tekrar deneyiniz.'
+            })
+        }
+    </script>
+<body>
+
+     <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo">
+                        <a href="./default.aspx"><img src="img/sahraimage.jpeg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./default.aspx">Ana Sayfa</a></li>
+                            <li><a href="elbise.aspx">Elbise</a></li>
+                            <li><a href="tunik.aspx">Tunik</a></li>
+                            <li><a href="dısgiyim.aspx">Dış Giyim</a></li>
+                           
+                           <%-- <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="./product-details.html">Product Details</a></li>
+                                    <li><a href="./shop-cart.html">Shop Cart</a></li>
+                                    <li><a href="./checkout.html">Checkout</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>--%>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="iletisim.aspx">İletişim</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__right">
+                        <div class="header__right__auth">
+     <% if (Session["uye"]==null)
+        { %>
+           <a href="#ModalForm" role="button" data-toggle="modal">Giriş</a>
+                             <a href="musterikayıt.aspx">Kayıt Ol</a>
+     <% }
+        else
+        { %>
+		         
+                 <asp:Button ID="Button3" runat="server" Visible="false" OnClick="Button3_Click1" Text="Button" />	
+		         <a role="button" style="padding-right:0"  runat="server" onserverclick="Button3_Click1" >Çıkış Yap</a>
+     <% } %>
+
+                           
+                        </div> 
+         
+                 
+                        <ul class="header__right__widget">
+                            <li><span class="icon_search search-switch"></span></li>
+                            <li><a href="#"><span class="icon_heart_alt"></span>
+                                <div class="tip">2</div>
+                            </a></li>
+                             <% if (Session["uye"]==null)
+                                { %>
+                                  <a href="#ModalForm" role="button" Cssclass="icon_bag_alt" data-toggle="modal"></a>
+                         
+                             <% }
+                             else
+                             { %>
+                                   
+                                <li><a href="sepet.aspx"><span class="icon_bag_alt"></span>
+                                <div class="tip"></div>
+                            </a></li>
+                        
+                              <% } %>      
+                          
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+         
+    </header>
+    <!-- Header Section End -->
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+          <%--Giris Modal Başlangıcı--%>
+     
+<div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+            <asp:Button ID="Button1" data-dismiss="modal" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" runat="server" Text="" />
+           
+            <div class="myform bg-dark">
+                <h2 class="text-center">Hoşgeldiniz</h2>
+                <form >
+                    <div class="mb-3 mt-4">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <asp:TextBox ID="TextBox1" aria-describedby="emailHelp" Cssclass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage=" Email alanı boş bırakılamaz!" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                       
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Şifre</label>
+                        <asp:TextBox ID="TextBox2" Cssclass="form-control" TextMode="Password" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage=" Şifre alanı boş bırakılamaz!" ControlToValidate="TextBox2"></asp:RequiredFieldValidator>
+                    
+                    </div>
+                     <div class="control-group">
+				<label class="checkbox">
+					<asp:CheckBox ID="CheckBox1" runat="server" Text="Beni hatırla" />
+					
+				</label>
+			  </div>
+                    <asp:Button ID="Button2" class="btn btn-light mt-3" runat="server" OnClick="Button2_Click" Text="Giriş" />
+                  
+                   
+                    <p>Not a member? <a href="#">Signup now</a></p>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+		<%--Giris Modal Bitis--%>
+   </form>
+    <!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-7">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/sahraimage.jpeg" alt=""></a>
+                    </div>
+                    <p></p>
+                    <div class="footer__payment">
+                        <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                        <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-5">
+                <div class="footer__widget">
+                    <h6>Hesap</h6>
+                    <ul>
+                        <li><a href="#">Hesap Bilgileri</a></li>
+                        <li><a href="#">Kişisel Bilgiler</a></li>
+                        <li><a href="#">Sipariş Geçmişi</a></li>
+                        <li><a href="#">İndirim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+                <div class="footer__widget">
+                    <h6>Bilgilendirme</h6>
+                    <ul>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="musterikayıt.aspx">Üye OL</a></li>
+                        <li><a href="#">Yasal Uyarı</a></li>
+                        <li><a href="#">Şartlar Ve Koşullar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 col-sm-8">
+                <div class="footer__newslatter">
+                    <h6>Sosyal Medya</h6>
+                    <form action="#">
+                        <input type="text" placeholder="Email">
+                        <button type="submit" class="site-btn">Abone</button>
+                    </form>
+                    <div class="footer__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <div class="footer__copyright__text">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Ayşegül</a></p>
+                </div>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+    <%--js --%>
+    <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+ 
+
+</body>
+</html>

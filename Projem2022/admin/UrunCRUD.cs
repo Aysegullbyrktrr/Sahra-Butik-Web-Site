@@ -85,7 +85,7 @@ namespace Projem2022.admin
 
         }
         public Urun urungoster(string barkod)
-        {   //BARKOD NOLU ÜRÜNLERİ LİSTELER
+        {  //BARKOD NOLU ÜRÜNLERİ LİSTELER
 
             Urun urunum = new Urun();
 
@@ -105,13 +105,25 @@ namespace Projem2022.admin
             urunum.Sadet = Convert.ToUInt32(dt.Rows[0][6].ToString());
             urunum.Stur = Convert.ToString(dt.Rows[0][7]);
             urunum.Resim = dt.Rows[0][8].ToString();
-
-            urunum.Resim = dt.Rows[0][11].ToString();
+            
 
             db.kapat();
             return urunum;
         }
+        public DataTable katliste()
+        {
+            DataTable dt = new DataTable();
+            //veritabanından istenen kriterlere uyan kayıtlar çekilip,datatable içeresine aktarılacak
+            db.ac();
+            SqlCommand komut = new SqlCommand("select distinct KategoriId,KategoriAdi,Resim from KATEGORİLER", db.baglanti);
+            SqlDataAdapter adp = new SqlDataAdapter(komut);
+            adp.Fill(dt);
+            db.kapat();
+            return dt;
 
+
+
+        }
         //BARKOD NOLU ÜRÜNLERİ GÜNCELLER
         public bool urunguncelleme(Urun gurun)
         {

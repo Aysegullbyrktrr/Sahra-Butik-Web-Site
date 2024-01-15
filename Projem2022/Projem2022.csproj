@@ -530,6 +530,7 @@
     <Content Include="admin\urunekle.aspx" />
     <Content Include="admin\urungncl.aspx" />
     <Content Include="admin\urunlist.aspx" />
+    <Content Include="admin\urunresim\onecıkan4.jpeg" />
     <Content Include="admin\urun_g_ayrinti.aspx" />
     <Content Include="admin\urunsil.aspx" />
     <Content Include="admin\u_guncel_ayrinti.aspx" />
@@ -625,7 +626,9 @@
     <Content Include="admin\vendors\images\tick.svg" />
     <Content Include="admin\vendors\images\upgrade.svg" />
     <Content Include="admin\vendors\images\upload-file-img.jpg" />
+    <Content Include="admin\vendors\images\uyelogo.jpeg" />
     <Content Include="admin\vendors\images\wave.png" />
+    <Content Include="admin\vendors\images\welcomelogo.jpeg" />
     <Content Include="admin\vendors\scripts\advanced-components.js" />
     <Content Include="admin\vendors\scripts\apexcharts-setting.js" />
     <Content Include="admin\vendors\scripts\calendar-setting.js" />
@@ -652,6 +655,138 @@
     <Content Include="admin\vendors\styles\style.css" />
     <Content Include="admin\vendors\styles\style.min.css" />
     <Content Include="admin\video-player.html" />
+    <Content Include="blog-details.html" />
+    <Content Include="blog.html" />
+    <Content Include="checkout.html" />
+    <Content Include="contact.html" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\elegant-icons.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\slicknav.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="default.aspx" />
+    <Content Include="dısgiyim.aspx" />
+    <Content Include="elbise.aspx" />
+    <Content Include="fonts\ElegantIcons.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="img\banner\banner-1.jpg" />
+    <Content Include="img\banner\banner-2.jpg" />
+    <Content Include="img\banner\banner-3.jpg" />
+    <Content Include="img\blog\blog-1.jpg" />
+    <Content Include="img\blog\blog-10.jpg" />
+    <Content Include="img\blog\blog-2.jpg" />
+    <Content Include="img\blog\blog-3.jpg" />
+    <Content Include="img\blog\blog-4.jpg" />
+    <Content Include="img\blog\blog-5.jpg" />
+    <Content Include="img\blog\blog-6.jpg" />
+    <Content Include="img\blog\blog-7.jpg" />
+    <Content Include="img\blog\blog-8.jpg" />
+    <Content Include="img\blog\blog-9.jpg" />
+    <Content Include="img\blog\details\blog-details.jpg" />
+    <Content Include="img\blog\details\comment-1.jpg" />
+    <Content Include="img\blog\details\comment-2.jpg" />
+    <Content Include="img\blog\details\comment-3.jpg" />
+    <Content Include="img\blog\sidebar\fp-1.jpg" />
+    <Content Include="img\blog\sidebar\fp-2.jpg" />
+    <Content Include="img\blog\sidebar\fp-3.jpg" />
+    <Content Include="img\categories\category-1.jpg" />
+    <Content Include="img\categories\category-2.jpg" />
+    <Content Include="img\categories\category-3.jpg" />
+    <Content Include="img\categories\category-4.jpg" />
+    <Content Include="img\categories\category-5.jpg" />
+    <Content Include="img\categories\onecikan1.jpeg" />
+    <Content Include="img\categories\onecikan2.jpeg" />
+    <Content Include="img\categories\onecikan5.jpeg" />
+    <Content Include="img\categories\onecikan6.jpeg" />
+    <Content Include="img\categories\onecıkan.jpeg" />
+    <Content Include="img\categories\onecıkan2.jpeg" />
+    <Content Include="img\categories\onecıkan3.jpeg" />
+    <Content Include="img\categories\onecıkan4.jpeg" />
+    <Content Include="img\discount.jpg" />
+    <Content Include="img\instagram\insta-1.jpg" />
+    <Content Include="img\instagram\insta-2.jpg" />
+    <Content Include="img\instagram\insta-3.jpg" />
+    <Content Include="img\instagram\insta-4.jpg" />
+    <Content Include="img\instagram\insta-5.jpg" />
+    <Content Include="img\instagram\insta-6.jpg" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\payment\payment-1.png" />
+    <Content Include="img\payment\payment-2.png" />
+    <Content Include="img\payment\payment-3.png" />
+    <Content Include="img\payment\payment-4.png" />
+    <Content Include="img\payment\payment-5.png" />
+    <Content Include="img\product\details\product-1.jpg" />
+    <Content Include="img\product\details\product-2.jpg" />
+    <Content Include="img\product\details\product-3.jpg" />
+    <Content Include="img\product\details\product-4.jpg" />
+    <Content Include="img\product\details\thumb-1.jpg" />
+    <Content Include="img\product\details\thumb-2.jpg" />
+    <Content Include="img\product\details\thumb-3.jpg" />
+    <Content Include="img\product\details\thumb-4.jpg" />
+    <Content Include="img\product\product-1.jpg" />
+    <Content Include="img\product\product-2.jpg" />
+    <Content Include="img\product\product-3.jpg" />
+    <Content Include="img\product\product-4.jpg" />
+    <Content Include="img\product\product-5.jpg" />
+    <Content Include="img\product\product-6.jpg" />
+    <Content Include="img\product\product-7.jpg" />
+    <Content Include="img\product\product-8.jpg" />
+    <Content Include="img\product\related\rp-1.jpg" />
+    <Content Include="img\product\related\rp-2.jpg" />
+    <Content Include="img\product\related\rp-3.jpg" />
+    <Content Include="img\product\related\rp-4.jpg" />
+    <Content Include="img\sahra-logo1.png" />
+    <Content Include="img\sahra-logo2.png" />
+    <Content Include="img\sahraimage.jpeg" />
+    <Content Include="img\sahramenu.jpeg" />
+    <Content Include="img\shop-cart\cp-1.jpg" />
+    <Content Include="img\shop-cart\cp-2.jpg" />
+    <Content Include="img\shop-cart\cp-3.jpg" />
+    <Content Include="img\shop-cart\cp-4.jpg" />
+    <Content Include="img\shop\shop-1.jpg" />
+    <Content Include="img\shop\shop-2.jpg" />
+    <Content Include="img\shop\shop-3.jpg" />
+    <Content Include="img\shop\shop-4.jpg" />
+    <Content Include="img\shop\shop-5.jpg" />
+    <Content Include="img\shop\shop-6.jpg" />
+    <Content Include="img\shop\shop-7.jpg" />
+    <Content Include="img\shop\shop-8.jpg" />
+    <Content Include="img\shop\shop-9.jpg" />
+    <Content Include="img\trend\bs-1.jpg" />
+    <Content Include="img\trend\bs-2.jpg" />
+    <Content Include="img\trend\bs-3.jpg" />
+    <Content Include="img\trend\f-1.jpg" />
+    <Content Include="img\trend\f-2.jpg" />
+    <Content Include="img\trend\f-3.jpg" />
+    <Content Include="img\trend\ht-1.jpg" />
+    <Content Include="img\trend\ht-2.jpg" />
+    <Content Include="img\trend\ht-3.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.nicescroll.min.js" />
+    <Content Include="js\jquery.slicknav.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\mixitup.min.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="main.html" />
+    <Content Include="musteridogrulama.aspx" />
+    <Content Include="musterikayıt.aspx" />
+    <Content Include="product-details.html" />
+    <Content Include="readme.txt" />
+    <Content Include="sepet.aspx" />
+    <Content Include="shop-cart.html" />
+    <Content Include="shop.html" />
+    <Content Include="tumurunler.aspx" />
+    <Content Include="tunik.aspx" />
+    <Content Include="urundetay.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -677,6 +812,8 @@
     <Compile Include="admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\Katekle.cs" />
+    <Compile Include="admin\KatekleCRUD.cs" />
     <Compile Include="admin\ugiris.aspx.cs">
       <DependentUpon>ugiris.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -744,7 +881,94 @@
     <Compile Include="admin\u_s_guncelle.aspx.designer.cs">
       <DependentUpon>u_s_guncelle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Db.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dısgiyim.aspx.cs">
+      <DependentUpon>dısgiyim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dısgiyim.aspx.designer.cs">
+      <DependentUpon>dısgiyim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="elbise.aspx.cs">
+      <DependentUpon>elbise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elbise.aspx.designer.cs">
+      <DependentUpon>elbise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Iletisim.cs" />
+    <Compile Include="IletisimCRUD.cs" />
+    <Compile Include="Musteri.cs" />
+    <Compile Include="MusteriCRUD.cs" />
+    <Compile Include="musteridogrulama.aspx.cs">
+      <DependentUpon>musteridogrulama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="musteridogrulama.aspx.designer.cs">
+      <DependentUpon>musteridogrulama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="musterikayıt.aspx.cs">
+      <DependentUpon>musterikayıt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="musterikayıt.aspx.designer.cs">
+      <DependentUpon>musterikayıt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sepet.aspx.cs">
+      <DependentUpon>sepet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sepet.aspx.designer.cs">
+      <DependentUpon>sepet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sepet.cs" />
+    <Compile Include="SepetCRUD.cs" />
+    <Compile Include="Sifrele.cs" />
+    <Compile Include="SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="tumurunler.aspx.cs">
+      <DependentUpon>tumurunler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tumurunler.aspx.designer.cs">
+      <DependentUpon>tumurunler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tunik.aspx.cs">
+      <DependentUpon>tunik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tunik.aspx.designer.cs">
+      <DependentUpon>tunik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Urun.cs" />
+    <Compile Include="UrunCRUD.cs" />
+    <Compile Include="urundetay.aspx.cs">
+      <DependentUpon>urundetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="urundetay.aspx.designer.cs">
+      <DependentUpon>urundetay.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\.github\workflows\npm-publish.yml" />
@@ -837,7 +1061,43 @@
     <Content Include="admin\vendors\fonts\themify.ttf" />
     <Content Include="admin\vendors\fonts\themify.woff" />
     <Content Include="admin\Admin.Master" />
+    <Content Include=".DS_Store" />
+    <Content Include="fonts\ElegantIcons.eot" />
+    <Content Include="fonts\ElegantIcons.ttf" />
+    <Content Include="fonts\ElegantIcons.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
+    <Content Include="sass\style.scss" />
+    <Content Include="sass\_base.scss" />
+    <Content Include="sass\_blog-details.scss" />
+    <Content Include="sass\_blog-sidebar.scss" />
+    <Content Include="sass\_blog.scss" />
+    <Content Include="sass\_breadcrumb.scss" />
+    <Content Include="sass\_categories.scss" />
+    <Content Include="sass\_checkout.scss" />
+    <Content Include="sass\_contact.scss" />
+    <Content Include="sass\_footer.scss" />
+    <Content Include="sass\_header.scss" />
+    <Content Include="sass\_home-page.scss" />
+    <Content Include="sass\_mixins.scss" />
+    <Content Include="sass\_product-details.scss" />
+    <Content Include="sass\_product.scss" />
+    <Content Include="sass\_responsive.scss" />
+    <Content Include="sass\_shop-cart.scss" />
+    <Content Include="sass\_shop.scss" />
+    <Content Include="sass\_variable.scss" />
+    <Content Include="Source\barfiller-master.zip" />
+    <Content Include="Source\bootstrap-4.2.1-dist.zip" />
+    <Content Include="Source\font-awesome-4.7.0.zip" />
+    <Content Include="Source\jQuery.countdown-master.zip" />
+    <Content Include="Source\Magnific-Popup-master.zip" />
+    <Content Include="Source\OwlCarousel2-2.3.4.zip" />
+    <Content Include="Source\SlickNav-master.zip" />
+    <Content Include="SiteMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -845,9 +1105,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="admin\urunresim\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

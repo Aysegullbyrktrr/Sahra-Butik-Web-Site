@@ -56,7 +56,9 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-6 col-lg-7">
-					<img src="vendors/images/sahrabutikgiris.jpeg" alt="">
+					<div class="input-group custom">
+					<img src="vendors/images/sahra-logo.png" />
+						</div>
 				</div>
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
